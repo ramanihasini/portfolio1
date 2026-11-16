@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hasini Ramani | Data Analytics &amp; ML Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5FA;--surface:#FFFFFF;--ink:#101B33;--muted:#4A5673;--line:#D5DDEB;
+  --blue:#2F5597;--mist:#DCE5F3;--safe:#1E7B4F;--bad:#C0392B;
+  color-scheme:light;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1526;--surface:#16203A;--ink:#EAF0FB;--muted:#A5B2CF;--line:#2A3858;
+    --blue:#8FB2F0;--mist:#1D2B4D;--safe:#5FD39A;--bad:#FF8A7A;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1526;--surface:#16203A;--ink:#EAF0FB;--muted:#A5B2CF;--line:#2A3858;
+  --blue:#8FB2F0;--mist:#1D2B4D;--safe:#5FD39A;--bad:#FF8A7A;color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.6 "Instrument Sans",system-ui,sans-serif}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+nav{display:flex;gap:1.25rem;flex-wrap:wrap;padding:1.25rem 0;font-weight:500}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--blue)}
+.hero{display:grid;gap:2.5rem;padding:2rem 0 4rem;grid-template-columns:1.1fr 1fr;align-items:center}
+.hero h1{font-size:clamp(2.8rem,8vw,5.2rem);font-weight:800;letter-spacing:-.03em;color:var(--blue)}
+.role{font-family:"Bricolage Grotesque",sans-serif;font-size:1.35rem;font-weight:500;margin:.9rem 0 1rem}
+.hero p{color:var(--muted);max-width:34rem;margin:0 0 1.5rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:.5rem;font-weight:600;text-decoration:none;border:2px solid var(--blue)}
+.btn.main{background:var(--blue);color:var(--bg)}
+.btn.alt{color:var(--blue)}
+.demo{background:var(--surface);border:1px solid var(--line);border-radius:.75rem;padding:1.25rem}
+.demo h2{font-size:1.15rem;margin-bottom:.25rem}
+.demo small{color:var(--muted);display:block;margin-bottom:.9rem}
+.demo label{font-weight:600;font-size:.9rem}
+.row{display:flex;gap:.5rem;margin:.35rem 0 1rem}
+.row input{flex:1;min-width:0;padding:.65rem .75rem;border:1px solid var(--line);border-radius:.5rem;background:var(--bg);color:var(--ink);font:inherit}
+.row button{padding:.65rem 1rem;border:0;border-radius:.5rem;background:var(--blue);color:var(--bg);font:600 1rem inherit;font-family:inherit;cursor:pointer}
+.verdict{font-family:"Bricolage Grotesque",sans-serif;font-size:1.5rem;font-weight:800;min-height:1.8rem}
+.verdict.safe{color:var(--safe)}.verdict.bad{color:var(--bad)}
+.feat{list-style:none;margin:.5rem 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.35rem .75rem;font-size:.9rem;color:var(--muted)}
+.feat b{color:var(--ink)}
+section{padding:3rem 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:1.9rem;margin-bottom:1.5rem;color:var(--blue)}
+.proj{display:grid;grid-template-columns:1fr 12rem;gap:.25rem 2rem;padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.proj:first-of-type{padding-top:0}
+.proj h3{font-size:1.2rem}
+.proj p{margin:.35rem 0 0;color:var(--muted);max-width:40rem}
+.tag{color:var(--muted);font-size:.9rem;text-align:right}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.cols h3{font-size:1.1rem;margin-bottom:.75rem}
+ul.plain{list-style:none;margin:0 0 2rem;padding:0}
+ul.plain li{padding:.5rem 0;border-bottom:1px solid var(--line)}
+ul.plain span{display:block;color:var(--muted);font-size:.92rem}
+.skills{display:grid;gap:.75rem}
+.skills div{display:grid;grid-template-columns:9rem 1fr;gap:1rem}
+.skills dt{font-weight:600}.skills dd{margin:0;color:var(--muted)}
+.skills{margin:0}
+footer{padding:3rem 0 2rem;border-top:1px solid var(--line)}
+footer h2{font-size:2.2rem;color:var(--blue);margin-bottom:.75rem}
+footer p{color:var(--muted);margin:0 0 1rem}
+.links{display:flex;gap:1.25rem;flex-wrap:wrap;font-weight:600}
+@media (max-width:760px){
+  .hero,.cols{grid-template-columns:1fr}
+  .proj{grid-template-columns:1fr}.tag{text-align:left}
+  .skills div{grid-template-columns:1fr;gap:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Sections"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+
+  <header class="hero">
+    <div>
+      <h1>Hasini Ramani</h1>
+      <div class="role">Data analytics and machine learning fresher</div>
+      <p>Final-year B.Tech CSE student with hands-on experience in data analytics and machine learning through virtual internships and projects. Interested in DevOps and AI engineering, and eager to apply my skills to real-world problems.</p>
+      <div class="btns">
+        <a class="btn main" href="#projects">See my projects</a>
+        <a class="btn alt" href="mailto:hasiniramani83@gmail.com">Email me</a>
+      </div>
+    </div>
+
+    <div class="demo">
+      <h2>Try a URL check</h2>
+      <small>A simple rule-based demo of the features my phishing detector reads. The real project uses a trained Random Forest.</small>
+      <label for="u">Paste a URL</label>
+      <div class="row">
+        <input id="u" type="text" value="http://192.168.4.7/secure-login@bank.com/verify" autocomplete="off" spellcheck="false">
+        <button id="go" type="button">Check</button>
+      </div>
+      <div id="v" class="verdict" aria-live="polite"></div>
+      <ul class="feat" id="f"></ul>
+    </div>
+  </header>
+</div>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <article class="proj"><div><h3>Intelligent Resource Allocation and Optimization Using Analytics</h3><p>Auto Scale AI predicts cloud workload from telemetry data using machine learning, then scales resources automatically to cut cost and response time while keeping availability high.</p></div><div class="tag">Major project</div></article>
+  <article class="proj"><div><h3>Web-Based Phishing &amp; Malicious URL Detection System</h3><p>A Flask app where users enter a URL and a Random Forest classifier labels it Safe or Malicious from features like URL length, special characters, IP usage and number of dots.</p></div><div class="tag">Hackathon project</div></article>
+  <article class="proj"><div><h3>Used Car Price Prediction using Machine Learning</h3><p>Predicts a used car’s selling price from its year, present price, kilometers driven, fuel type, seller type, transmission and previous owners.</p></div><div class="tag">VOIS internship</div></article>
+  <article class="proj"><div><h3>Healthcare Analytics for Doctor Visits</h3><p>Analyzes patient demographics, health conditions, socio-economic factors and insurance support to find patterns in doctor visit frequency, with a Streamlit app.</p></div><div class="tag">VOIS internship</div></article>
+  <article class="proj"><div><h3>She Alert: Women’s Safety Emergency Alert System</h3><p>A web app with one-click SOS, emergency contacts and live GPS sharing. I led the team and coordinated design, tasks and delivery.</p></div><div class="tag">Team lead</div></article>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience and learning</h2>
+  <div class="cols">
+    <div>
+      <h3>Internships</h3>
+      <ul class="plain">
+        <li>Logistics Data Analyst Intern<span>YuvaIntern</span></li>
+        <li>Data Analytics Virtual Internship<span>AICTE and VOIS for Tech, implemented by Edunet Foundation</span></li>
+      </ul>
+      <h3>Education</h3>
+      <ul class="plain">
+        <li>B.Tech, Computer Science Engineering, 7.89 / 10<span>Sridevi Women’s Engineering College, Hyderabad, 2023 to 2027</span></li>
+        <li>Intermediate, 87.4%<span>St. Anthony’s Girls College, 2021 to 2023</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Certifications</h3>
+      <ul class="plain">
+        <li>AI Engineering Intern<span>Clarity</span></li>
+        <li>Agentic AI Certified Foundations Associate<span>Oracle</span></li>
+        <li>Data Visualization<span>VOIS for Tech, Edunet Foundation, Vodafone Idea Foundation</span></li>
+        <li>DevOps and Artificial Intelligence<span>Infosys Springboard</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <dl class="skills">
+    <div><dt>Programming</dt><dd>Python</dd></div>
+    <div><dt>Data and ML</dt><dd>Data Analysis, Pandas, Matplotlib, Seaborn, Scikit-Learn, Random Forest</dd></div>
+    <div><dt>Web and tools</dt><dd>Flask, Streamlit, HTML, CSS, JavaScript, Git</dd></div>
+    <div><dt>Soft skills</dt><dd>Communication</dd></div>
+  </dl>
+</div></section>
+
+<footer id="contact"><div class="wrap">
+  <h2>Let’s connect</h2>
+  <p>I’m a fresher looking for an internship where I can work on real problems and keep learning.</p>
+  <div class="links">
+    <a href="mailto:hasiniramani83@gmail.com">hasiniramani83@gmail.com</a>
+    <a href="tel:+917330654104">+91 73306 54104</a>
+    <a href="https://linkedin.com/in/hasiniramani">LinkedIn</a>
+    <a href="https://github.com/ramanihasini">GitHub</a>
+  </div>
+</div></footer>
+
+<script>
+(function(){
+  var u=document.getElementById('u'),v=document.getElementById('v'),f=document.getElementById('f');
+  function check(){
+    var s=u.value.trim(),host=s.replace(/^[a-z]+:\/\//i,'').split(/[\/?#]/)[0];
+    var len=s.length,dots=(host.match(/\./g)||[]).length,
+        ip=/^\d{1,3}(\.\d{1,3}){3}(:\d+)?$/.test(host),
+        sp=(s.match(/[@%\-_=&]/g)||[]).length,
+        kw=/(login|verify|secure|update|account|bank|password)/i.test(s);
+    var score=(len>75?1:0)+(dots>3?1:0)+(ip?2:0)+(sp>4?1:0)+(kw?1:0)+(s.indexOf('@')>-1?1:0);
+    var bad=score>=3;
+    v.className='verdict '+(bad?'bad':'safe');
+    v.textContent=s?(bad?'Looks malicious':'Looks safe'):'';
+    function li(k,val){return '<li>'+k+': <b>'+val+'</b></li>';}
+    f.innerHTML=s?li('Length',len)+li('Dots in host',dots)+li('IP address',ip?'yes':'no')+li('Special characters',sp)+li('Suspicious keyword',kw?'yes':'no')+li('Score',score+' / 7'):'';
+  }
+  document.getElementById('go').addEventListener('click',check);
+  u.addEventListener('keydown',function(e){if(e.key==='Enter')check();});
+  check();
+})();
+</script>
+</body>
+</html>
